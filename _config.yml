@@ -1,7 +1,7 @@
 name: FullXpression
 favicon: null
-layout_spectrum: 0.7978912643156946
-typography_spectrum: 0.8927769723813981
+layout_spectrum: 0.97004
+typography_spectrum: 0.75101
 cta:
   domain: null
   bucket: null
@@ -16,13 +16,13 @@ opengraph:
   appId: null
 color:
   brandColors:
-    - '#17BEBB'
-    - '#2E282A'
-    - '#CD5334'
-    - '#EDB88B'
-    - '#FAD8D6'
-  brandStrength: 0.9272590873297304
+    - '#1f1a17'
+    - '#da251d'
+    - '#e6e6e6'
+    - '#221d1a'
+    - '#6b6967'
+  brandStrength: 0.75
   lightness: 0.816800961503759
-  saturation: 0.4205423465464264
+  saturation: 0.5
   rhythmicContrast: 0.6131163097452372
 purpose: []
