@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>WARNING: Your Purpose is About to Expire  - FullXpression</title><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="1bc29bd1-2700-4fbf-a074-8b2e515bb243"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>WARNING: Your Purpose is About to Expire  - FullXpression</title><meta name="generator" content="The Grid taylor/0.17.17"><meta name="the-grid-solution" content="2b46eb85-8c88-42c0-abe8-c9c06ab82de9"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -203,13 +203,6 @@ body {
 .stack {
   z-index: 1;
   transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-}
-.group,
-.aside,
-.decoration {
-  transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -270,10 +263,6 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
-.media iframe {
-  transition: 0.3s opacity ease-in;
-  -webkit-transition: 0.3s opacity ease-in;
-}
 h1 a,
 h2 a,
 h3 a {
@@ -294,15 +283,11 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.text li {
-  margin-left: 1.5em;
-}
 .decoration {
   pointer-events: none;
 }
 .svg {
   position: relative;
-  background-color: currentColor;
 }
 .svg > svg {
   position: absolute;
@@ -328,6 +313,9 @@ a {
 .svg polyline {
   stroke: currentColor;
 }
+.decoration {
+  background-color: currentColor;
+}
 .svg {
   background-color: transparent;
 }
@@ -343,12 +331,39 @@ a {
   background-color: currentColor;
   content: "";
 }
-.colors-style-aside-border .publisher,
-.colors-style-aside-border .author {
-  padding: .4vw .6vw;
+.revealed,
+.revealed > * {
+  pointer-events: none;
 }
-.cover_only_header:first-of-type {
-  position: fixed;
+.revealed .aside,
+.revealed a {
+  pointer-events: all;
+}
+.revealed {
+  background-image: none !important;
+  background-color: none !important;
+}
+.stack,
+.group,
+.aside,
+.decoration,
+.media,
+html body a.media,
+.media img,
+.media picture,
+iframe {
+  min-width: 0;
+  min-height: 0;
+  transition-duration: .3s;
+  transition-property: transform, color, background-color, opacity, clip, z-index, border-width;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: -webkit-transform, color, background-color, opacity, clip, z-index, border-width;
+  -webkit-transition-timing-function: ease-out;
+}
+.media img {
+  transition-property: transform, color, background-color;
+  -webkit-transition-property: -webkit-transform, color, background-color;
 }
 .decoration {
   z-index: 3;
@@ -361,7 +376,7 @@ ul {
 }
 .panel .heading {
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 1px;
 }
 .listing:not(.open) .shadow-overlay {
   pointer-events: none;
@@ -376,17 +391,6 @@ ul {
 .group .text,
 .group .aside {
   z-index: 2;
-}
-.group button {
-  border-radius: 3px;
-  padding: 15px 25px;
-  margin-top: 36px;
-}
-.group button:hover {
-  opacity: .8;
-}
-.group .attribution {
-  overflow: hidden;
 }
 .group .attribution:after {
   display: block;
@@ -483,6 +487,7 @@ ul {
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a:hover { color: rgb(157, 153, 149); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .decoration.separator { color: rgb(218, 37, 29); }
+#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual { background-color: rgb(245, 242, 240); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a { color: rgb(176, 39, 32); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:hover { color: rgb(204, 204, 204); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:active { color: rgb(255, 255, 255); }
@@ -504,6 +509,7 @@ ul {
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column { background-color: rgb(245, 242, 240); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a { color: rgb(176, 39, 32); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:hover { color: rgb(204, 204, 204); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:active { color: rgb(255, 255, 255); }
@@ -526,6 +532,7 @@ ul {
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column { background-color: rgb(245, 242, 240); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a { color: rgb(176, 39, 32); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:hover { color: rgb(204, 204, 204); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:active { color: rgb(255, 255, 255); }
@@ -546,6 +553,7 @@ ul {
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column { background-color: rgb(245, 242, 240); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a { color: rgb(176, 39, 32); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:hover { color: rgb(204, 204, 204); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:active { color: rgb(255, 255, 255); }
@@ -571,6 +579,7 @@ ul {
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column { background-color: rgb(245, 242, 240); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a { color: rgb(176, 39, 32); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:hover { color: rgb(204, 204, 204); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:active { color: rgb(255, 255, 255); }
@@ -590,6 +599,7 @@ ul {
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph { color: rgb(32, 27, 24); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed { background-color: rgb(245, 242, 240); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a { color: rgb(176, 39, 32); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:hover { color: rgb(204, 204, 204); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:active { color: rgb(255, 255, 255); }
@@ -602,6 +612,7 @@ ul {
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img{height: 3.064rem; width: 4.084rem; position: absolute; top: 0rem; left: 0rem;}
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical > .media.cover { background-image: linear-gradient(rgb(59, 49, 43), rgb(245, 242, 240)); color: rgb(218, 37, 29); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical :hover.media.cover { color: rgb(245, 242, 240); }
+#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical { background-color: rgb(245, 242, 240); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a { color: rgb(176, 39, 32); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:hover { color: rgb(204, 204, 204); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:active { color: rgb(255, 255, 255); }
@@ -654,6 +665,7 @@ display: none;
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a:hover { color: rgb(157, 153, 149); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .decoration.separator { color: rgb(218, 37, 29); }
+#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual { background-color: rgb(245, 242, 240); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a { color: rgb(176, 39, 32); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:hover { color: rgb(204, 204, 204); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:active { color: rgb(255, 255, 255); }
@@ -675,6 +687,7 @@ display: none;
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column { background-color: rgb(245, 242, 240); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a { color: rgb(176, 39, 32); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:hover { color: rgb(204, 204, 204); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:active { color: rgb(255, 255, 255); }
@@ -697,6 +710,7 @@ display: none;
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column { background-color: rgb(245, 242, 240); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a { color: rgb(176, 39, 32); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:hover { color: rgb(204, 204, 204); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:active { color: rgb(255, 255, 255); }
@@ -717,6 +731,7 @@ display: none;
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column { background-color: rgb(245, 242, 240); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a { color: rgb(176, 39, 32); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:hover { color: rgb(204, 204, 204); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:active { color: rgb(255, 255, 255); }
@@ -742,6 +757,7 @@ display: none;
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column { background-color: rgb(245, 242, 240); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a { color: rgb(176, 39, 32); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:hover { color: rgb(204, 204, 204); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:active { color: rgb(255, 255, 255); }
@@ -761,6 +777,7 @@ display: none;
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph { color: rgb(32, 27, 24); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed { background-color: rgb(245, 242, 240); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a { color: rgb(176, 39, 32); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:hover { color: rgb(204, 204, 204); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:active { color: rgb(255, 255, 255); }
@@ -773,6 +790,7 @@ display: none;
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img{height: 4.594rem; width: 6.124rem; position: absolute; top: 0rem; left: 0rem;}
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical > .media.cover { background-image: linear-gradient(rgb(59, 49, 43), rgb(245, 242, 240)); color: rgb(218, 37, 29); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical :hover.media.cover { color: rgb(245, 242, 240); }
+#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical { background-color: rgb(245, 242, 240); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a { color: rgb(176, 39, 32); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:hover { color: rgb(204, 204, 204); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:active { color: rgb(255, 255, 255); }
@@ -825,6 +843,7 @@ display: none;
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a:hover { color: rgb(157, 153, 149); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .decoration.separator { color: rgb(218, 37, 29); }
+#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual { background-color: rgb(245, 242, 240); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a { color: rgb(176, 39, 32); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:hover { color: rgb(204, 204, 204); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:active { color: rgb(255, 255, 255); }
@@ -846,6 +865,7 @@ display: none;
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column { background-color: rgb(245, 242, 240); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a { color: rgb(176, 39, 32); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:hover { color: rgb(204, 204, 204); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:active { color: rgb(255, 255, 255); }
@@ -868,6 +888,7 @@ display: none;
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column { background-color: rgb(245, 242, 240); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a { color: rgb(176, 39, 32); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:hover { color: rgb(204, 204, 204); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:active { color: rgb(255, 255, 255); }
@@ -888,6 +909,7 @@ display: none;
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column { background-color: rgb(245, 242, 240); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a { color: rgb(176, 39, 32); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:hover { color: rgb(204, 204, 204); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:active { color: rgb(255, 255, 255); }
@@ -913,6 +935,7 @@ display: none;
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column { background-color: rgb(245, 242, 240); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a { color: rgb(176, 39, 32); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:hover { color: rgb(204, 204, 204); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:active { color: rgb(255, 255, 255); }
@@ -932,6 +955,7 @@ display: none;
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph { color: rgb(32, 27, 24); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed { background-color: rgb(245, 242, 240); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a { color: rgb(176, 39, 32); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:hover { color: rgb(204, 204, 204); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:active { color: rgb(255, 255, 255); }
@@ -944,6 +968,7 @@ display: none;
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img{height: 5.054rem; width: 6.734rem; position: absolute; top: 0rem; left: 0rem;}
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical > .media.cover { background-image: linear-gradient(rgb(59, 49, 43), rgb(245, 242, 240)); color: rgb(218, 37, 29); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical :hover.media.cover { color: rgb(245, 242, 240); }
+#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical { background-color: rgb(245, 242, 240); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a { color: rgb(176, 39, 32); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:hover { color: rgb(204, 204, 204); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:active { color: rgb(255, 255, 255); }
@@ -996,6 +1021,7 @@ display: none;
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a:hover { color: rgb(157, 153, 149); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .decoration.separator { color: rgb(218, 37, 29); }
+#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual { background-color: rgb(245, 242, 240); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a { color: rgb(176, 39, 32); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:hover { color: rgb(204, 204, 204); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:active { color: rgb(255, 255, 255); }
@@ -1017,6 +1043,7 @@ display: none;
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column { background-color: rgb(245, 242, 240); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a { color: rgb(176, 39, 32); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:hover { color: rgb(204, 204, 204); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:active { color: rgb(255, 255, 255); }
@@ -1039,6 +1066,7 @@ display: none;
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column { background-color: rgb(245, 242, 240); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a { color: rgb(176, 39, 32); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:hover { color: rgb(204, 204, 204); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:active { color: rgb(255, 255, 255); }
@@ -1059,6 +1087,7 @@ display: none;
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column { background-color: rgb(245, 242, 240); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a { color: rgb(176, 39, 32); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:hover { color: rgb(204, 204, 204); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:active { color: rgb(255, 255, 255); }
@@ -1084,6 +1113,7 @@ display: none;
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column { background-color: rgb(245, 242, 240); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a { color: rgb(176, 39, 32); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:hover { color: rgb(204, 204, 204); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:active { color: rgb(255, 255, 255); }
@@ -1103,6 +1133,7 @@ display: none;
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph { color: rgb(32, 27, 24); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed { background-color: rgb(245, 242, 240); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a { color: rgb(176, 39, 32); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:hover { color: rgb(204, 204, 204); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:active { color: rgb(255, 255, 255); }
@@ -1115,6 +1146,7 @@ display: none;
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img{height: 7.574rem; width: 10.094rem; position: absolute; top: 0rem; left: 0rem;}
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical > .media.cover { background-image: linear-gradient(rgb(59, 49, 43), rgb(245, 242, 240)); color: rgb(218, 37, 29); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical :hover.media.cover { color: rgb(245, 242, 240); }
+#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical { background-color: rgb(245, 242, 240); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a { color: rgb(176, 39, 32); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:hover { color: rgb(204, 204, 204); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:active { color: rgb(255, 255, 255); }
@@ -1167,6 +1199,7 @@ display: none;
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a:hover { color: rgb(157, 153, 149); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .decoration.separator { color: rgb(218, 37, 29); }
+#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual { background-color: rgb(245, 242, 240); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a { color: rgb(176, 39, 32); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:hover { color: rgb(204, 204, 204); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:active { color: rgb(255, 255, 255); }
@@ -1188,6 +1221,7 @@ display: none;
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column { background-color: rgb(245, 242, 240); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a { color: rgb(176, 39, 32); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:hover { color: rgb(204, 204, 204); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:active { color: rgb(255, 255, 255); }
@@ -1210,6 +1244,7 @@ display: none;
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column { background-color: rgb(245, 242, 240); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a { color: rgb(176, 39, 32); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:hover { color: rgb(204, 204, 204); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:active { color: rgb(255, 255, 255); }
@@ -1230,6 +1265,7 @@ display: none;
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column { background-color: rgb(245, 242, 240); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a { color: rgb(176, 39, 32); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:hover { color: rgb(204, 204, 204); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:active { color: rgb(255, 255, 255); }
@@ -1255,6 +1291,7 @@ display: none;
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column { background-color: rgb(245, 242, 240); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a { color: rgb(176, 39, 32); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:hover { color: rgb(204, 204, 204); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:active { color: rgb(255, 255, 255); }
@@ -1274,6 +1311,7 @@ display: none;
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph { color: rgb(32, 27, 24); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed { background-color: rgb(245, 242, 240); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a { color: rgb(176, 39, 32); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:hover { color: rgb(204, 204, 204); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:active { color: rgb(255, 255, 255); }
@@ -1286,6 +1324,7 @@ display: none;
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img{height: 9rem; width: 12rem; position: absolute; top: 0rem; left: 0rem;}
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical > .media.cover { background-image: linear-gradient(rgb(59, 49, 43), rgb(245, 242, 240)); color: rgb(218, 37, 29); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical :hover.media.cover { color: rgb(245, 242, 240); }
+#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical { background-color: rgb(245, 242, 240); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a { color: rgb(176, 39, 32); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:hover { color: rgb(204, 204, 204); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:active { color: rgb(255, 255, 255); }
@@ -1338,6 +1377,7 @@ display: none;
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .text.paragraph a:hover { color: rgb(157, 153, 149); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual > .decoration.separator { color: rgb(218, 37, 29); }
+#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b .group.textual { background-color: rgb(245, 242, 240); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a { color: rgb(176, 39, 32); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:hover { color: rgb(204, 204, 204); }
 #u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b#u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b a:active { color: rgb(255, 255, 255); }
@@ -1359,6 +1399,7 @@ display: none;
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f .group.column { background-color: rgb(245, 242, 240); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a { color: rgb(176, 39, 32); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:hover { color: rgb(204, 204, 204); }
 #u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f#u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f a:active { color: rgb(255, 255, 255); }
@@ -1381,6 +1422,7 @@ display: none;
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce .group.column { background-color: rgb(245, 242, 240); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a { color: rgb(176, 39, 32); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:hover { color: rgb(204, 204, 204); }
 #u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce#u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce a:active { color: rgb(255, 255, 255); }
@@ -1401,6 +1443,7 @@ display: none;
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 .group.column { background-color: rgb(245, 242, 240); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a { color: rgb(176, 39, 32); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:hover { color: rgb(204, 204, 204); }
 #u-94182b56-d244-4d79-b8bc-f2cc11705769#u-94182b56-d244-4d79-b8bc-f2cc11705769 a:active { color: rgb(255, 255, 255); }
@@ -1426,6 +1469,7 @@ display: none;
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph { color: rgb(32, 27, 24); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 .group.column { background-color: rgb(245, 242, 240); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a { color: rgb(176, 39, 32); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:hover { color: rgb(204, 204, 204); }
 #u-0e2e660a-a3c5-4b5d-864f-594aa89547c8#u-0e2e660a-a3c5-4b5d-864f-594aa89547c8 a:active { color: rgb(255, 255, 255); }
@@ -1445,6 +1489,7 @@ display: none;
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph { color: rgb(32, 27, 24); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a { color: rgb(200, 108, 102); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed > .text.paragraph a:hover { color: rgb(157, 153, 149); }
+#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f .group.mixed { background-color: rgb(245, 242, 240); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a { color: rgb(176, 39, 32); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:hover { color: rgb(204, 204, 204); }
 #u-aef6bf4d-d586-4bd3-a741-c33817c5e24f#u-aef6bf4d-d586-4bd3-a741-c33817c5e24f a:active { color: rgb(255, 255, 255); }
@@ -1457,6 +1502,7 @@ display: none;
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img{height: 9rem; width: 12rem; position: absolute; top: 0rem; left: 0rem;}
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical > .media.cover { background-image: linear-gradient(rgb(59, 49, 43), rgb(245, 242, 240)); color: rgb(218, 37, 29); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical :hover.media.cover { color: rgb(245, 242, 240); }
+#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 .group.graphical { background-color: rgb(245, 242, 240); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a { color: rgb(176, 39, 32); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:hover { color: rgb(204, 204, 204); }
 #u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18#u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18 a:active { color: rgb(255, 255, 255); }
@@ -1484,13 +1530,13 @@ display: none;
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b-g-textual-t-paragraph"><p><span class="first-letter">&#x201C;Follow your <wbr class="w480 w960"></wbr>purpose&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>W</span>e&#x2019;ve all <wbr class="w481 w961"></wbr>heard <wbr class="w1799"></wbr>the mantra by now. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span> non-discriminant, all-pervading cultural battlecry <wbr class="w480 w960"></wbr>cemented to the psyche of anyone <wbr class="w481 w961 w1799"></wbr>with an instagram feed <wbr class="w480 w960"></wbr>and <wbr class="w1800"></wbr>burning desire to escape cubicle hell.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t&#x2019;s a call to arms. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span> raison d&#x2019;etre. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span> supposed right. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>M</span>ore than just a pithy quote card sprinkled across social <wbr class="w480 w960"></wbr>media&#x2026; </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t&#x2019;s become a &#x201C;</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>w</span>ay of life&#x201D; </p><p><span class="first-letter"> </span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>for a whole new generation of dreamers, changemakers, <wbr class="w480 w960"></wbr>and lifestyle renegades <wbr class="w481 w961 w1799"></wbr>refusing to fit into somebody <wbr class="w480 w960"></wbr>else&#x2019;s <wbr class="w1800"></wbr>box.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>F</span>air enough. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he movement clearly isn&#x2019;t without </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>s</span>ome</p><p><span class="first-letter"> </span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>merit. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>ut is &#x201C;living your purpose&#x201D; really the soul-stirring, fire <wbr class="w480 w960"></wbr>burning, self-empowering <wbr class="w481 w961 w1799"></wbr>credo we so blindly ascribe it <wbr class="w480 w960"></wbr>to be?</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>O</span>r is it a wolf in sheep's clothing? </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>hat&#x2019;s the question that transformational coach (& <wbr class="w480 w960"></wbr>expression engineer), Ryan <wbr class="w481 w961 w1799"></wbr>Schwartz challenges us with <wbr class="w480 w960"></wbr>in his <wbr class="w1800"></wbr>brand new treatise: </p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b-g-textual-d-separator-mobile"><?xml version="1.0" encoding="utf-8"?>
+</div><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b-g-textual-t-paragraph"><p><span class="first-letter">&#x201C;Follow your <wbr class="w480 w960"></wbr>purpose&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">W</span>e&#x2019;ve all <wbr class="w481 w961"></wbr>heard <wbr class="w1799"></wbr>the mantra by now. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span> non-discriminant, all-pervading cultural battlecry <wbr class="w480 w960"></wbr>cemented to the psyche of anyone <wbr class="w481 w961 w1799"></wbr>with an instagram feed <wbr class="w480 w960"></wbr>and <wbr class="w1800"></wbr>burning desire to escape cubicle hell.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>t&#x2019;s a call to arms. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span> raison d&#x2019;etre. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span> supposed right. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">M</span>ore than just a pithy quote card sprinkled across social <wbr class="w480 w960"></wbr>media&#x2026; </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>t&#x2019;s become a &#x201C;</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">w</span>ay of life&#x201D; </p><p><span class="first-letter"> </span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>for a whole new generation of dreamers, changemakers, <wbr class="w480 w960"></wbr>and lifestyle renegades <wbr class="w481 w961 w1799"></wbr>refusing to fit into somebody <wbr class="w480 w960"></wbr>else&#x2019;s <wbr class="w1800"></wbr>box.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">F</span>air enough. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he movement clearly isn&#x2019;t without </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">s</span>ome</p><p><span class="first-letter"> </span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>merit. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>ut is &#x201C;living your purpose&#x201D; really the soul-stirring, fire <wbr class="w480 w960"></wbr>burning, self-empowering <wbr class="w481 w961 w1799"></wbr>credo we so blindly ascribe it <wbr class="w480 w960"></wbr>to be?</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">O</span>r is it a wolf in sheep's clothing? </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>hat&#x2019;s the question that transformational coach (& <wbr class="w480 w960"></wbr>expression engineer), Ryan <wbr class="w481 w961 w1799"></wbr>Schwartz challenges us with <wbr class="w480 w960"></wbr>in his <wbr class="w1800"></wbr>brand new treatise: </p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b-g-textual-d-separator-mobile"><?xml version="1.0" encoding="utf-8"?>
 
 <svg preserveAspectRatio="none" id="u-fe66e71a-16bb-4db1-98d9-a3cef0ccdb5b-g-textual-d-separator-mobile-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f"><div kind="group" index="column" class="group column group column" id="u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f-g-column-t-paragraph"><p><a href="http://bit.ly/FXP_7Principles"> FREE DOWNLOAD: The 7 Principles of FullXpression</a></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>S</span>chwartz argues that this seemingly innocent, <wbr class="w480 w960"></wbr>empowering, chest-beating declaration <wbr class="w481 w961 w1799"></wbr>is actually more <wbr class="w480 w960"></wbr>caging than <wbr class="w1800"></wbr>it is liberating.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd an open-eyed, empirical look beyond the quote card <wbr class="w480 w960"></wbr>gloss, seems to support his <wbr class="w481 w961 w1799"></wbr>claim. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Live Your Purpose&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he phrase alone presumes that you&#x2019;re not already doing <wbr class="w480 w960"></wbr>it.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>s if there&#x2019;s some mystical, fixed &#x201C;thing&#x201D; that you&#x2019;ve yet to <wbr class="w480 w960"></wbr>realize.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span> birthright you&#x2019;ve yet to claim.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd this supposed &#x201C;shortcoming&#x201D; or inner lack can <wbr class="w480 w960"></wbr>actually make it more of a <wbr class="w481 w961 w1799"></wbr>disempowering pursuit. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>reeding a huge sense of insecurity for anyone who isn&#x2019;t <wbr class="w480 w960"></wbr>living their &#x201C;purpose&#x201D; in an <wbr class="w481 w961 w1799"></wbr>obvious, culturally-affirming <wbr class="w480 w960 w1800"></wbr>way.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd rest assured&#x2026; like all consumer-driven fear and <wbr class="w480 w960"></wbr>insecurity, &#x201C;purpose insecurity&#x201D; <wbr class="w481 w961"></wbr>is <wbr class="w1799"></wbr>one that corporations <wbr class="w480 w960"></wbr>and <wbr class="w1800"></wbr>coaches are more than willing to bank on.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="da1be617-49d0-4f5e-bcea-9a3c0d09b6ce" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce"><div kind="group" index="column" class="group column group column" id="u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce-g-column-t-paragraph"><p><span class="first-letter">T</span>ake a look at any bestseller list, and you&#x2019;ll see that &#x201C;Live <wbr class="w480 w960"></wbr>Your Purpose&#x201D; has spawned <wbr class="w481 w961 w1799"></wbr>an entire industry of slick-<wbr class="w480 w960 w1800"></wbr>haired gurus, self-help authors and so-called coaches <wbr class="w480 w960"></wbr>more <wbr class="w481 w961 w1799"></wbr>than willing to capitalize on the insecurity it breeds.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>ut before we pull out the pitchforks, Schwartz doesn&#x2019;t <wbr class="w480 w960"></wbr>necessarily believe that there&#x2019;s <wbr class="w481 w961 w1799"></wbr>something nefarious at <wbr class="w480 w960"></wbr>play.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>J</span>ust a faulty paradigm and enduring mistruth.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd as explained deeper in the </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>7</span> Principles of FullXpression</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>,</span> here&#x2019;s why he believes &#x201C;Live Your Purpose&#x201D; is due for <wbr class="w480 w960"></wbr>makeover:</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>P</span>urpose isn&#x2019;t a &#x201C;fixed&#x201D; thing</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>W</span>hen I was 6-year old, my purpose was to become a <wbr class="w480 w960"></wbr>firefighter. At 11, I wanted to play <wbr class="w481 w961 w1799"></wbr>pro soccer. And today&#x2026; <wbr class="w480 w960"></wbr>well <wbr class="w1800"></wbr>let&#x2019;s just say my purpose consists of a </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>d</span>ynamic, ever-expanding list of awesome</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>.</span> </p><p><a href="http://bit.ly/FXP_7Principles"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>So when Ryan affirms that purpose isn&#x2019;t a fixed thing</a></p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="94182b56-d244-4d79-b8bc-f2cc11705769" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-94182b56-d244-4d79-b8bc-f2cc11705769"><div kind="group" index="column" class="group column group column" id="u-94182b56-d244-4d79-b8bc-f2cc11705769-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-94182b56-d244-4d79-b8bc-f2cc11705769-g-column-t-paragraph"><p><span class="first-letter">,</span> but a transient impulsive thrust (intermingled and <wbr class="w480 w960"></wbr>inspired by present conditions)... <wbr class="w481"></wbr>it <wbr class="w961 w1799"></wbr>all of a sudden makes <wbr class="w480 w960"></wbr>a ton of <wbr class="w1800"></wbr>sense.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd realizing this simple truth is quite profound.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>i</span>t instantly liberates us from this constant search for an <wbr class="w480 w960"></wbr>elusive, fixed &#x201C;purpose&#x201D;... </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x2026; and gives us permission to stop carrying around the <wbr class="w480 w960"></wbr>carcass of a &#x201C;purpose&#x201D;</span> long <wbr class="w481 w961 w1799"></wbr>dead.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t&#x2019;s crazy how we&#x2019;re so willing to do that as kids (living a <wbr class="w480 w960"></wbr>new &#x201C;purpose&#x201D; in every <wbr class="w481 w961 w1799"></wbr>moment)</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Y</span>et as adults, we feel obliged to stay loyal to a singular <wbr class="w480 w960"></wbr>fixed &#x201C;purposed&#x201D;... as if <wbr class="w481 w961 w1799"></wbr>rejecting it would make us a <wbr class="w480 w960"></wbr>quitter or <wbr class="w1800"></wbr>a non-committed flake. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>ut here&#x2019;s where that becomes a REAL problem:</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;When you cling to a false or expired purpose, you close <wbr class="w480 w960"></wbr>your eyes to your authentic <wbr class="w481 w961 w1799"></wbr>expression&#x201D;</span> </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>M</span>uch of our inner-struggle comes not from &#x201C;lack of <wbr class="w480 w960"></wbr>purpose&#x201D; but from inauthentic <wbr class="w481 w961 w1799"></wbr>expression.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="0e2e660a-a3c5-4b5d-864f-594aa89547c8" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-0e2e660a-a3c5-4b5d-864f-594aa89547c8"><div kind="group" index="column" class="group column group column" id="u-0e2e660a-a3c5-4b5d-864f-594aa89547c8-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-0e2e660a-a3c5-4b5d-864f-594aa89547c8-g-column-t-paragraph"><p><span class="first-letter">Y</span>et our typical remedy often consists of psychological <wbr class="w480 w960"></wbr>sorbets to soothe the hunger <wbr class="w481 w961"></wbr>for <wbr class="w1799"></wbr>fulfillment, instead of a <wbr class="w480 w960"></wbr>deep <wbr class="w1800"></wbr>dive inwards to attune to the authentic expression <wbr class="w480 w481 w960"></wbr>the <wbr class="w961 w1799"></wbr>moment calls for.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t&#x2019;s easy to do in times of crisis.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>L</span>ast January, Ryan suddenly woke up paralyzed in his left <wbr class="w480 w960"></wbr>side. In that moment, all the <wbr class="w481 w961 w1799"></wbr>&#x201C;purposes&#x201D; he was living <wbr class="w480 w960"></wbr>prior <wbr class="w1800"></wbr>suddenly vanished and condensed into a single <wbr class="w480 w960"></wbr>thrust <wbr class="w481 w961 w1799"></wbr>of expression&#x2026; </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Wiggle my left fucking toe&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Y</span>et in times of relative ease, our authentic expression is <wbr class="w480 w960"></wbr>less obvious, and </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>r</span>equires practice to reliably attune to it</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>.</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>hat practice is what Ryan calls &#x201C;FullXpression&#x201D;. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd for anyone who&#x2019;s ever felt pigeonholed by a purpose <wbr class="w480 w960"></wbr>they&#x2019;ve long outgrown, his <wbr class="w481 w961 w1799"></wbr>take is shockingly liberating.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd liberation&#x2026; freedom&#x2026; (even from purpose itself)... </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>sn&#x2019;t that what we&#x2019;re all after at the end of the day?</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>N</span>ote:</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he 7 Principles of FullXpression </p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_lt_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text stack mixed" itemid="aef6bf4d-d586-4bd3-a741-c33817c5e24f" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f"><div kind="group" index="mixed" class="group mixed group mixed" id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="400" max-height="300" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg" id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f-g-mixed-m-cover"><picture id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6fb68bdbd76fde572033e7e39965c843/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=289&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0dd789d7bd6fa18dcdc95ee174a789e7/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=288&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f-g-mixed-t-paragraph"><p><span class="first-letter">i</span>s Schwartz&#x2019;s timely attempt to initiate leaders, <wbr class="w480 w960"></wbr>changemakers and &#x201C;purpose&#x201D;-driven <wbr class="w481 w961 w1799"></wbr>individuals into a <wbr class="w480 w960"></wbr>healthier, <wbr class="w1800"></wbr>more authentic pursuit of their passion. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>his article covers just 1 of the 7 principles covered in the <wbr class="w480 w960"></wbr>book. To see the other 6 <wbr class="w481"></wbr>long <wbr class="w961 w1799"></wbr>standing paradigms he <wbr class="w480 w960"></wbr>takes <wbr class="w1800"></wbr>aim at (and beautifully reconstructs) - </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>g</span>rab your free copy here</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>.</span> </p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack graphical i last_chapter w_cover w_media w_decoration media_lt_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true stack graphical" itemid="cb9a94a4-1b0a-49e0-8d57-3646e8834e18" itemtype="image" diff_index="5" index="graphical" kind="stack" score="3" tag="article" id="u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18"><div kind="group" index="graphical" class="group graphical group graphical" id="u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="400" max-height="300" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/ec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg" id="u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover"><picture id="u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div></article><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i first_layout last_layout w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_medium_headline w_medium_title w_long_paragraph w_long_text w_cover w_media w_trailer media_lt_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text w_connector layout one" id="u-04e94052-f8cc-4e44-8642-a224116fd790-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-04e94052-f8cc-4e44-8642-a224116fd790-desktop-l-one-l-one"></div><style id="u-04e94052-f8cc-4e44-8642-a224116fd790-color">body{background-color: rgba(250, 249, 248, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i first_layout last_layout w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_medium_headline w_medium_title w_long_paragraph w_long_text w_cover w_media w_trailer media_lt_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text w_connector layout one" id="u-04e94052-f8cc-4e44-8642-a224116fd790-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-04e94052-f8cc-4e44-8642-a224116fd790-cinema-l-one-l-one"></div><style id="u-04e94052-f8cc-4e44-8642-a224116fd790-color">body{background-color: rgba(250, 249, 248, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f"><div kind="group" index="column" class="group column group column" id="u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-1e8dd1cb-5c05-4444-bdc5-c3834ff6f18f-g-column-t-paragraph"><p><a href="http://bit.ly/FXP_7Principles"> FREE DOWNLOAD: The 7 Principles of FullXpression</a></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">S</span>chwartz argues that this seemingly innocent, <wbr class="w480 w960"></wbr>empowering, chest-beating declaration <wbr class="w481 w961 w1799"></wbr>is actually more <wbr class="w480 w960"></wbr>caging than <wbr class="w1800"></wbr>it is liberating.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd an open-eyed, empirical look beyond the quote card <wbr class="w480 w960"></wbr>gloss, seems to support his <wbr class="w481 w961 w1799"></wbr>claim. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Live Your Purpose&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he phrase alone presumes that you&#x2019;re not already doing <wbr class="w480 w960"></wbr>it.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>s if there&#x2019;s some mystical, fixed &#x201C;thing&#x201D; that you&#x2019;ve yet to <wbr class="w480 w960"></wbr>realize.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span> birthright you&#x2019;ve yet to claim.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd this supposed &#x201C;shortcoming&#x201D; or inner lack can <wbr class="w480 w960"></wbr>actually make it more of a <wbr class="w481 w961 w1799"></wbr>disempowering pursuit. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>reeding a huge sense of insecurity for anyone who isn&#x2019;t <wbr class="w480 w960"></wbr>living their &#x201C;purpose&#x201D; in an <wbr class="w481 w961 w1799"></wbr>obvious, culturally-affirming <wbr class="w480 w960 w1800"></wbr>way.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd rest assured&#x2026; like all consumer-driven fear and <wbr class="w480 w960"></wbr>insecurity, &#x201C;purpose insecurity&#x201D; <wbr class="w481 w961"></wbr>is <wbr class="w1799"></wbr>one that corporations <wbr class="w480 w960"></wbr>and <wbr class="w1800"></wbr>coaches are more than willing to bank on.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="da1be617-49d0-4f5e-bcea-9a3c0d09b6ce" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce"><div kind="group" index="column" class="group column group column" id="u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-da1be617-49d0-4f5e-bcea-9a3c0d09b6ce-g-column-t-paragraph"><p><span class="first-letter">T</span>ake a look at any bestseller list, and you&#x2019;ll see that &#x201C;Live <wbr class="w480 w960"></wbr>Your Purpose&#x201D; has spawned <wbr class="w481 w961 w1799"></wbr>an entire industry of slick-<wbr class="w480 w960 w1800"></wbr>haired gurus, self-help authors and so-called coaches <wbr class="w480 w960"></wbr>more <wbr class="w481 w961 w1799"></wbr>than willing to capitalize on the insecurity it breeds.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>ut before we pull out the pitchforks, Schwartz doesn&#x2019;t <wbr class="w480 w960"></wbr>necessarily believe that there&#x2019;s <wbr class="w481 w961 w1799"></wbr>something nefarious at <wbr class="w480 w960"></wbr>play.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">J</span>ust a faulty paradigm and enduring mistruth.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd as explained deeper in the </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">7</span> Principles of FullXpression</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">,</span> here&#x2019;s why he believes &#x201C;Live Your Purpose&#x201D; is due for <wbr class="w480 w960"></wbr>makeover:</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">P</span>urpose isn&#x2019;t a &#x201C;fixed&#x201D; thing</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">W</span>hen I was 6-year old, my purpose was to become a <wbr class="w480 w960"></wbr>firefighter. At 11, I wanted to play <wbr class="w481 w961 w1799"></wbr>pro soccer. And today&#x2026; <wbr class="w480 w960"></wbr>well <wbr class="w1800"></wbr>let&#x2019;s just say my purpose consists of a </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">d</span>ynamic, ever-expanding list of awesome</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">.</span> </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><a href="http://bit.ly/FXP_7Principles">So when Ryan affirms that purpose isn&#x2019;t a fixed thing</a></p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="94182b56-d244-4d79-b8bc-f2cc11705769" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-94182b56-d244-4d79-b8bc-f2cc11705769"><div kind="group" index="column" class="group column group column" id="u-94182b56-d244-4d79-b8bc-f2cc11705769-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-94182b56-d244-4d79-b8bc-f2cc11705769-g-column-t-paragraph"><p><span class="first-letter">,</span> but a transient impulsive thrust (intermingled and <wbr class="w480 w960"></wbr>inspired by present conditions)... <wbr class="w481"></wbr>it <wbr class="w961 w1799"></wbr>all of a sudden makes <wbr class="w480 w960"></wbr>a ton of <wbr class="w1800"></wbr>sense.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd realizing this simple truth is quite profound.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">i</span>t instantly liberates us from this constant search for an <wbr class="w480 w960"></wbr>elusive, fixed &#x201C;purpose&#x201D;... </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x2026; and gives us permission to stop carrying around the <wbr class="w480 w960"></wbr>carcass of a &#x201C;purpose&#x201D;</span> long <wbr class="w481 w961 w1799"></wbr>dead.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>t&#x2019;s crazy how we&#x2019;re so willing to do that as kids (living a <wbr class="w480 w960"></wbr>new &#x201C;purpose&#x201D; in every <wbr class="w481 w961 w1799"></wbr>moment)</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">Y</span>et as adults, we feel obliged to stay loyal to a singular <wbr class="w480 w960"></wbr>fixed &#x201C;purposed&#x201D;... as if <wbr class="w481 w961 w1799"></wbr>rejecting it would make us a <wbr class="w480 w960"></wbr>quitter or <wbr class="w1800"></wbr>a non-committed flake. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>ut here&#x2019;s where that becomes a REAL problem:</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;When you cling to a false or expired purpose, you close <wbr class="w480 w960"></wbr>your eyes to your authentic <wbr class="w481 w961 w1799"></wbr>expression&#x201D;</span> </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">M</span>uch of our inner-struggle comes not from &#x201C;lack of <wbr class="w480 w960"></wbr>purpose&#x201D; but from inauthentic <wbr class="w481 w961 w1799"></wbr>expression.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="0e2e660a-a3c5-4b5d-864f-594aa89547c8" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-0e2e660a-a3c5-4b5d-864f-594aa89547c8"><div kind="group" index="column" class="group column group column" id="u-0e2e660a-a3c5-4b5d-864f-594aa89547c8-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-0e2e660a-a3c5-4b5d-864f-594aa89547c8-g-column-t-paragraph"><p><span class="first-letter">Y</span>et our typical remedy often consists of psychological <wbr class="w480 w960"></wbr>sorbets to soothe the hunger <wbr class="w481 w961"></wbr>for <wbr class="w1799"></wbr>fulfillment, instead of a <wbr class="w480 w960"></wbr>deep <wbr class="w1800"></wbr>dive inwards to attune to the authentic expression <wbr class="w480 w481 w960"></wbr>the <wbr class="w961 w1799"></wbr>moment calls for.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>t&#x2019;s easy to do in times of crisis.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">L</span>ast January, Ryan suddenly woke up paralyzed in his left <wbr class="w480 w960"></wbr>side. In that moment, all the <wbr class="w481 w961 w1799"></wbr>&#x201C;purposes&#x201D; he was living <wbr class="w480 w960"></wbr>prior <wbr class="w1800"></wbr>suddenly vanished and condensed into a single <wbr class="w480 w960"></wbr>thrust <wbr class="w481 w961 w1799"></wbr>of expression&#x2026; </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Wiggle my left fucking toe&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">Y</span>et in times of relative ease, our authentic expression is <wbr class="w480 w960"></wbr>less obvious, and </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">r</span>equires practice to reliably attune to it</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">.</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>hat practice is what Ryan calls &#x201C;FullXpression&#x201D;. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd for anyone who&#x2019;s ever felt pigeonholed by a purpose <wbr class="w480 w960"></wbr>they&#x2019;ve long outgrown, his <wbr class="w481 w961 w1799"></wbr>take is shockingly liberating.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd liberation&#x2026; freedom&#x2026; (even from purpose itself)... </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>sn&#x2019;t that what we&#x2019;re all after at the end of the day?</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">N</span>ote:</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he 7 Principles of FullXpression </p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_lt_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text stack mixed" itemid="aef6bf4d-d586-4bd3-a741-c33817c5e24f" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f"><div kind="group" index="mixed" class="group mixed group mixed" id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="400" max-height="300" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg" id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f-g-mixed-m-cover"><picture id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/6fb68bdbd76fde572033e7e39965c843/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=289&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0dd789d7bd6fa18dcdc95ee174a789e7/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=288&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/11c465183a81a552f4ef41e380f753ae/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F5343bf7e8ae99837e9d17e3a7b838b7467371545.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-aef6bf4d-d586-4bd3-a741-c33817c5e24f-g-mixed-t-paragraph"><p><span class="first-letter">i</span>s Schwartz&#x2019;s timely attempt to initiate leaders, <wbr class="w480 w960"></wbr>changemakers and &#x201C;purpose&#x201D;-driven <wbr class="w481 w961 w1799"></wbr>individuals into a <wbr class="w480 w960"></wbr>healthier, <wbr class="w1800"></wbr>more authentic pursuit of their passion. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>his article covers just 1 of the 7 principles covered in the <wbr class="w480 w960"></wbr>book. To see the other 6 <wbr class="w481"></wbr>long <wbr class="w961 w1799"></wbr>standing paradigms he <wbr class="w480 w960"></wbr>takes <wbr class="w1800"></wbr>aim at (and beautifully reconstructs) - </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">g</span>rab your free copy here</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">.</span> </p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack graphical i last_chapter w_cover w_media w_decoration media_lt_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true stack graphical" itemid="cb9a94a4-1b0a-49e0-8d57-3646e8834e18" itemtype="image" diff_index="5" index="graphical" kind="stack" score="3" tag="article" id="u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18"><div kind="group" index="graphical" class="group graphical group graphical" id="u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical"><a kind="media" index="cover" class="vfld media cover vfld-leader vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="400" max-height="300" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/ec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg" id="u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover"><picture id="u-cb9a94a4-1b0a-49e0-8d57-3646e8834e18-g-graphical-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5a285b16cab0e9f747520bdcd8a489b9/gradientmap.jpg?color1=%231F1814&color2=%233D3129&color3=%237A6152&color4=%23ED7D78&color5=%23F9D4D2&height=300&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fec32c01c0e1c925fa864336a359bf29a1f9a6d1d.jpg&srgb=True&stop1=0.1&stop2=0.3&stop3=0.5&stop4=0.7&stop5=0.9&width=400 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a></div></article><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i first_layout last_layout w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_medium_headline w_medium_title w_long_paragraph w_long_text w_cover w_media w_trailer media_lt_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text w_connector layout one" id="u-04e94052-f8cc-4e44-8642-a224116fd790-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-04e94052-f8cc-4e44-8642-a224116fd790-desktop-l-one-l-one"></div><style id="u-04e94052-f8cc-4e44-8642-a224116fd790-color">body{background-color: rgba(250, 249, 248, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i first_layout last_layout w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_medium_headline w_medium_title w_long_paragraph w_long_text w_cover w_media w_trailer media_lt_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text w_connector layout one" id="u-04e94052-f8cc-4e44-8642-a224116fd790-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-04e94052-f8cc-4e44-8642-a224116fd790-cinema-l-one-l-one"></div><style id="u-04e94052-f8cc-4e44-8642-a224116fd790-color">body{background-color: rgba(250, 249, 248, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1894,7 +1940,7 @@ module.exports = function() {
 
 
 },{}],5:[function(require,module,exports){
-var cache, fade, frames, hiding, highlighting, showing;
+var Hide, Show, cache, fade, frames, hiding, highlighting, showing;
 
 highlighting = showing = hiding = null;
 
@@ -1921,40 +1967,69 @@ fade = function(element, to, from) {
   return frames[element.id] = requestAnimationFrame(Frame);
 };
 
+document.body.addEventListener('mousemove', function(e) {});
+
+Hide = function(target) {
+  clearTimeout(showing);
+  setTimeout(function() {
+    if (hiding !== target) {
+      hiding.style.backgroundImage = cache[hiding.id];
+      return delete cache[hiding.id];
+    }
+  }, 300);
+  hiding = highlighting;
+  highlighting = null;
+  return fade(hiding.getElementsByTagName('img')[0], 1);
+};
+
+Show = function(target, x, y, img) {
+  var colors, value;
+  if (target !== highlighting) {
+    clearTimeout(showing);
+    showing = setTimeout(function() {
+      if (highlighting === target) {
+        return fade(img, 0.8);
+      }
+    }, 150);
+  }
+  if ((value = cache[target.id]) == null) {
+    cache[target.id] = value = window.getComputedStyle(target)['background-image'];
+  }
+  if (value.indexOf('linear-gradient') > -1) {
+    colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
+    if (colors[1].indexOf('rgba') > -1) {
+      colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
+    } else {
+      colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
+    }
+    value = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
+  } else {
+    return;
+  }
+  target.style.backgroundImage = value;
+  return highlighting = target;
+};
+
+document.body.addEventListener('click', function(e) {
+  if (highlighting) {
+    return Hide(highlighting);
+  }
+});
+
 document.body.addEventListener('mousemove', function(e) {
-  var clientX, clientY, colors, img, parent, ref, target, value;
+  var clientX, clientY, img, parent, ref, target;
   target = e.target;
   while (target) {
-    if (target.tagName === 'A' && target.classList.contains('media')) {
+    if (target.tagName === 'A' && target.classList.contains('media') && !target.classList.contains('revealed')) {
       break;
     }
     target = target.parentNode;
   }
   if (highlighting && highlighting !== target) {
-    clearTimeout(showing);
-    setTimeout(function() {
-      if (hiding !== target) {
-        hiding.style.backgroundImage = cache[hiding.id];
-        return delete cache[hiding.id];
-      }
-    }, 300);
-    hiding = highlighting;
-    highlighting = null;
-    fade(hiding.getElementsByTagName('img')[0], 1);
+    Hide(highlighting);
   }
   if (target) {
     if ((ref = (img = target.getElementsByTagName('img')[0])) != null ? ref.complete : void 0) {
-      if (target !== highlighting) {
-        clearTimeout(showing);
-        showing = setTimeout(function() {
-          if (highlighting === target) {
-            return fade(img, 0.8);
-          }
-        }, 150);
-      }
-      if ((value = cache[target.id]) == null) {
-        cache[target.id] = value = window.getComputedStyle(target)['background-image'];
-      }
       clientX = e.pageX;
       clientY = e.pageY;
       parent = target;
@@ -1963,19 +2038,7 @@ document.body.addEventListener('mousemove', function(e) {
         clientY -= parent.offsetTop;
         parent = parent.offsetParent;
       }
-      if (value.indexOf('linear-gradient') > -1) {
-        colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
-        if (colors[1].indexOf('rgba') > -1) {
-          colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
-        } else {
-          colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
-        }
-        value = 'radial-gradient(circle at ' + clientX + 'px ' + clientY + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
-      } else {
-        return;
-      }
-      target.style.backgroundImage = value;
-      return highlighting = target;
+      return Show(target, clientX, clientY, img);
     }
   }
 });
@@ -2123,11 +2186,13 @@ module.exports = function() {
 
 
 },{"./reflow":9}],8:[function(require,module,exports){
-var Player, Youtube, iframe, revealed, rgb2hex;
+var Player, Youtube, iframe, reflow, revealed, rgb2hex;
 
 iframe = null;
 
 Youtube = null;
+
+reflow = require('./reflow');
 
 Player = function(id, src, width, height, color, bg) {
   if (src.indexOf('youtube') > -1) {
@@ -2136,6 +2201,8 @@ Player = function(id, src, width, height, color, bg) {
   src = src.replace('COLOR', color).replace('BG', bg);
   if (location.protocol !== 'https:') {
     src = src.replace('https:', 'http:');
+  } else {
+    src = src.replace('http:', 'https:');
   }
   iframe = document.createElement('iframe');
   iframe.id = id;
@@ -2148,79 +2215,294 @@ Player = function(id, src, width, height, color, bg) {
   iframe.style.left = 0;
   iframe.style.right = 0;
   iframe.style.position = 'absolute';
-  iframe.style.opacity = 0.2;
+  iframe.style.opacity = 0;
   iframe.onload = function() {
-    return iframe.style.opacity = 1;
+    return iframe.showing = setTimeout(function() {
+      iframe.classList.add('loaded');
+      iframe.style.display = '';
+      iframe.showing = setTimeout(function() {
+        iframe.style.opacity = 1;
+        return iframe.showing = setTimeout(function() {
+          return typeof iframe.onloaded === "function" ? iframe.onloaded(true) : void 0;
+        }, 500);
+      }, 1);
+      return typeof iframe.onloaded === "function" ? iframe.onloaded() : void 0;
+    }, 300);
   };
   return iframe;
 };
 
 revealed = null;
 
-Player.reveal = function(iframe) {
-  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
-  while (target = (target || iframe).parentNode) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (target.parentNode.classList.contains('group')) {
-        parent = target.parentNode;
-      } else {
-        parent = target;
+Player.findMedia = function(iframe) {
+  var i, len, media, ref, ref1, ref2, sibling;
+  if (iframe.parentNode) {
+    ref = iframe.parentNode.childNodes;
+    for (i = 0, len = ref.length; i < len; i++) {
+      sibling = ref[i];
+      if ((ref1 = sibling.classList) != null ? ref1.contains('media') : void 0) {
+        return sibling;
       }
-      revealed = iframe;
-      play = parent.getElementsByClassName('play')[0];
-      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
-      top = -play.offsetTop;
-      play.style.webkitTransformOrigin = 'top right';
-      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
-      target.classList.add('revealed');
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        if (sibling.nodeType === 1 && sibling !== parent) {
-          translateX = translateY = null;
-          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
-            translateX = -diff;
-          }
-          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
-            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
-              translateX = diff;
-            }
-          }
-          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
-            translateY = -diff;
-          }
-          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
-            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
-              translateY = diff;
-            }
-          }
-          if (Math.abs(translateX) > Math.abs(translateY)) {
-            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
-          } else {
-            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
-          }
-          console.log(translateX, translateY, sibling);
-        }
+    }
+    while (media = (media || iframe).parentNode) {
+      if ((ref2 = media.classList) != null ? ref2.contains('media') : void 0) {
+        return media;
       }
     }
   }
 };
 
+Player.getClipRect = function(img, media) {
+  var rect;
+  rect = {};
+  rect.left = -img.offsetLeft;
+  rect.right = -img.offsetLeft + img.parentNode.offsetWidth;
+  rect.top = -img.offsetTop;
+  rect.bottom = img.offsetTop + img.parentNode.offsetHeight;
+  return rect;
+};
+
+Player.rect = function(rect) {
+  return 'rect(' + rect.top + 'px,' + rect.right + 'px,' + rect.bottom + 'px,' + rect.left + 'px)';
+};
+
+Player.set = function(element, property, value) {
+  var webkit;
+  webkit = 'webkit' + property.charAt(0).toUpperCase() + property.substring(1);
+  if (element.style[webkit] != null) {
+    return element.style[webkit] = value;
+  } else {
+    return element.style[property] = value;
+  }
+};
+
+Player.reveal = function(iframe, instant) {
+  var firstTime, img, layout, left, media, offsetLeft, offsetTop, parent, play, ratio, rectLeft, rectRight, ref, root, shiftLeft, stack, targetHeight, targetWidth, top, translateX, translateY, zoom;
+  iframe.style.maxHeight = window.innerHeight + 'px';
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      root = stack = media;
+      while (root = root.parentNode) {
+        if (root.classList.contains('stack')) {
+          stack = root;
+        }
+        if (root.classList.contains('layout-system')) {
+          break;
+        }
+      }
+      layout = reflow.getLayout(root, stack);
+      console.log('get layout', root, stack, layout);
+      img = media.querySelector('picture, img');
+      offsetLeft = media.offsetLeft;
+      offsetTop = media.offsetTop;
+      if (media.parentNode.classList.contains('group')) {
+        parent = media.parentNode;
+        offsetLeft += parent.offsetLeft;
+        offsetTop += parent.offsetTop;
+      } else {
+        parent = media;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      Player.set(play, 'transformOrigin', 'top right');
+      if (!media.classList.contains('revealed')) {
+        firstTime = true;
+        media.classList.add('revealed');
+      }
+      if (layout && (layout.offsetWidth > media.offsetWidth * 2.5 || media.offsetWidth < 350 || media.offsetHeight < 200) && iframe.src.indexOf('soundcloud') === -1) {
+        if (firstTime) {
+          Player.set(img, 'transition', 'none');
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          return requestAnimationFrame(function() {
+            Player.set(img, 'transition', '');
+            return requestAnimationFrame(function() {
+              return Player.reveal(iframe);
+            });
+          });
+        }
+        iframe.style.zIndex = 6;
+        media.classList.add('expanded');
+        translateX = -offsetLeft - stack.offsetLeft;
+        translateY = -offsetTop - stack.offsetTop;
+        if (stack.parentNode !== layout) {
+          translateX += layout.offsetLeft + layout.parentNode.offsetLeft;
+          translateY += layout.offsetTop + layout.parentNode.offsetTop;
+        }
+        Player.set(img, 'transform', img.style.transform = 'translateX(' + (translateX - img.offsetLeft) + 'px) ' + 'translateY(' + (translateY - img.offsetTop) + 'px) ');
+        if (img) {
+          Player.set(media, 'transformOrigin', 'top left');
+          Player.set(img, 'transformOrigin', 'top left');
+          ratio = img.offsetWidth / img.offsetHeight;
+          targetHeight = Math.min(layout.offsetHeight, window.innerHeight);
+          targetWidth = ratio * targetHeight;
+          console.log(layout, layout.offsetHeight, targetHeight, 44444);
+          iframe.style.left = translateX + media.offsetLeft + 'px';
+          iframe.style.top = translateY + media.offsetTop + 'px';
+          iframe.style.width = layout.offsetWidth + 'px';
+          iframe.style.height = layout.offsetHeight + 'px';
+          zoom = targetHeight / img.offsetHeight;
+          shiftLeft = (layout.offsetWidth - targetWidth) / 2;
+          rectLeft = rectRight = Math.max(0, -shiftLeft / zoom);
+          if (media.style.overflow !== 'visible') {
+            requestAnimationFrame(function() {
+              media.style.overflow = 'visible';
+              stack.style.overflow = 'visible';
+              img.style.clip = Player.rect(Player.getClipRect(img));
+              return requestAnimationFrame(function() {
+                return img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+              });
+            });
+          } else {
+            img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+          }
+          if (img.style.webkitTransform) {
+            img.style.webkitTransform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          } else if (img.style.transform) {
+            img.style.transform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          }
+          left = translateX + layout.offsetWidth - play.offsetLeft - play.offsetWidth;
+          top = translateY - play.offsetTop;
+          Player.set(play, 'transform', 'translateX(' + (left - 10) + 'px) ' + 'translateY(' + (top + 10) + 'px) ' + 'scale(0.5)');
+        }
+        stack.style.zIndex = 10;
+        if (iframe.style.opacity === 1) {
+          Player.fade(parent, true, media);
+        } else {
+          iframe.onloaded = function(full) {
+            return Player.fade(parent, full, media);
+          };
+        }
+      } else {
+        media.classList.remove('expanded');
+        left = media.offsetWidth - play.offsetLeft - play.offsetWidth;
+        top = -play.offsetTop;
+        Player.set(play, 'transform', 'translateX(' + (left - 5) + 'px) translateY(' + (top + 5) + 'px) scale(0.5)');
+        iframe.style.left = media.offsetLeft + 'px';
+        iframe.style.top = media.offsetTop + 'px';
+        iframe.style.width = media.offsetWidth + 'px';
+        iframe.style.height = media.offsetHeight + 'px';
+        if (iframe.style.opacity === 1) {
+          img.style.opacity = 0;
+        } else {
+          iframe.onloaded = function(full) {
+            console.error('ONLOADED', full);
+            if (full) {
+              return img.style.opacity = 0;
+            } else {
+              return img.style.opacity = 0.8;
+            }
+          };
+        }
+        Player.expose(parent);
+      }
+    }
+  }
+};
+
+Player.fade = function(parent, full, media) {
+  var i, len, ref, results, sibling;
+  if (media) {
+    sibling = media.querySelector('picture, img');
+    if (full) {
+      sibling.style.opacity = 0;
+    }
+  }
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME' && !sibling.classList.contains('play')) {
+      if (full) {
+        results.push(sibling.style.opacity = 0);
+      } else {
+        results.push(sibling.style.opacity = 0.8);
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
+Player.expose = function(parent) {
+  var diff, i, len, ref, results, sibling, translateX, translateY;
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME') {
+      translateX = translateY = null;
+      if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+        translateX = -diff - 2;
+      }
+      if ((diff = parent.offsetLeft + parent.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+        if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+          translateX = diff + 2;
+        }
+      }
+      if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+        translateY = -diff - 2;
+      }
+      if ((diff = parent.offsetTop + parent.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+        if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+          translateY = diff + 2;
+        }
+      }
+      if (Math.abs(translateX) > Math.abs(translateY)) {
+        results.push(Player.set(sibling, 'transform', 'translateY(' + translateY + 'px)'));
+      } else {
+        results.push(Player.set(sibling, 'transform', 'translateX(' + translateX + 'px)'));
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
 Player.hide = function(iframe) {
-  var i, len, parent, play, ref, ref1, sibling;
-  while (parent = (parent || iframe).parentNode) {
-    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
-      parent.classList.remove('revealed');
+  var child, i, img, j, len, len1, media, parent, play, ref, ref1, ref2, ref3, sibling;
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('revealed') : void 0) {
+      media.classList.remove('revealed');
+      media.classList.remove('expanded');
+      Player.set(media, 'transform', '');
+      if (img = media.querySelector('picture, img')) {
+        img.style.zIndex = '';
+        img.style.opacity = '';
+        if (media.style.overflow === 'visible') {
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          setTimeout(function() {
+            img.style.clip = '';
+            return media.style.overflow = '';
+          }, 300);
+        }
+      }
+      ref1 = media.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        child = ref1[i];
+        Player.set(child, 'transform', '');
+      }
+      parent = media;
       if (parent.parentNode.classList.contains('group')) {
         parent = parent.parentNode;
       }
       play = parent.getElementsByClassName('play')[0];
-      play.style.webkitTransform = '';
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        sibling.style.webkitTransform = '';
+      play.style.zIndex = '';
+      Player.set(play, 'transform', '');
+      ref2 = parent.parentNode.childNodes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        sibling = ref2[j];
+        if (sibling.nodeType === 1 && sibling !== iframe) {
+          Player.set(sibling, 'transform', '');
+          sibling.style.opacity = '';
+        }
       }
+      if (!((ref3 = (parent = parent.parentNode).classList) != null ? ref3.contains('stack') : void 0)) {
+        parent = parent.parentNode;
+      }
+      parent.style.zIndex = '';
+      parent.style.visible = '';
     }
   }
   return revealed = null;
@@ -2244,29 +2526,32 @@ Player.stop = function(iframe) {
   var old;
   old = iframe;
   iframe.style.opacity = 0;
+  iframe.style.width = iframe.offsetWidth + 'px';
+  iframe.style.height = iframe.offsetHeight + 'px';
   setTimeout(function() {
     var ref;
     return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
   }, 300);
+  clearTimeout(iframe.showing);
   Player.hide(iframe);
   return iframe = null;
 };
 
 document.addEventListener('click', function(e) {
-  var bg, color, header, parent, play, ref, ref1, results, styles, target;
-  target = e.target;
+  var bg, color, header, media, parent, play, ref, ref1, results, styles;
+  media = e.target;
   results = [];
-  while (target) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (play = target.getElementsByClassName('play')[0]) {
-        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+  while (media) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      if (play = media.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === media || (iframe != null ? iframe.parentNode : void 0) === media.parentNode) {
           Player.stop(iframe);
         } else {
           if (iframe) {
             Player.stop(iframe);
           }
           color = bg = null;
-          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          header = (ref1 = media.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
           parent = header || play;
           while (parent) {
             if (parent.nodeType === 1) {
@@ -2285,14 +2570,14 @@ document.addEventListener('click', function(e) {
             parent = parent.parentNode;
           }
           iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
-          target.appendChild(iframe);
+          media.parentNode.insertBefore(iframe, media);
           Player.reveal(iframe);
         }
         e.preventDefault();
         break;
       }
     }
-    results.push(target = target.parentNode);
+    results.push(media = media.parentNode);
   }
   return results;
 });
@@ -2307,7 +2592,7 @@ rgb2hex = function(rgb) {
 window.exports = window.Player = Player;
 
 
-},{}],9:[function(require,module,exports){
+},{"./reflow":9}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
